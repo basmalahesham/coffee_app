@@ -73,7 +73,7 @@ class LocationAndProfileWidget extends StatelessWidget {
                     ),
                     child: Padding(
                       padding: const EdgeInsets.all(10),
-                      child: ImageIcon(AssetImage(Assets.imagesIcon)),
+                      child: ImageIcon(AssetImage(Assets.imagesIcon),color: Colors.white,),
                     ),
                   ),
                 ],
