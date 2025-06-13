@@ -57,7 +57,7 @@ class _HomeLayoutState extends State<HomeLayout> {
           size: 24,
         ),
         unselectedIconTheme: const IconThemeData(
-          color: ColorsManager.kGrayColor,
+          color: ColorsManager.kSecondaryColor,
           size: 24,
         ),
       ),
