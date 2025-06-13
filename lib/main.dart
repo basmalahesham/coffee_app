@@ -1,16 +1,14 @@
-import 'package:coffee_flutter_app/features/on_boarding/presentation/views/on_boarding_view.dart';
-import 'package:device_preview/device_preview.dart';
+import 'package:coffee_flutter_app/core/routing/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-void main() async{
+import 'core/routing/app_router.dart';
+
+void main() async {
   runApp(
     ScreenUtilInit(
-      builder: (context, child) => DevicePreview(
-        enabled: false,
-        builder: (context) => const MyApp(), // updated here
-      ),
-      designSize: const Size(375,812),
+      builder: (context, child) => MyApp(appRouter: AppRouter()),
+      designSize: const Size(375, 812),
       minTextAdapt: true,
       splitScreenMode: true,
     ),
@@ -18,7 +16,8 @@ void main() async{
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  const MyApp({super.key, required this.appRouter});
+  final AppRouter appRouter;
 
   // This widget is the root of your application.
   @override
@@ -26,7 +25,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
-      home: const OnBoardingView(),
+      initialRoute: Routes.onBoardingScreen,
+      onGenerateRoute: appRouter.generateRoute,
     );
   }
 }

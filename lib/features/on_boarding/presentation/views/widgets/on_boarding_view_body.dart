@@ -1,4 +1,4 @@
-import 'package:coffee_flutter_app/core/extensions/space_extension.dart';
+import 'package:coffee_flutter_app/core/helper/space_extension.dart';
 import 'package:coffee_flutter_app/core/theming/styles/text_styles.dart';
 import 'package:coffee_flutter_app/core/widgets/custom_elevated_button.dart';
 import 'package:coffee_flutter_app/generated/assets.dart';
@@ -52,7 +52,7 @@ class OnBoardingViewBody extends StatelessWidget {
                   32.height,
                   CustomElevatedButton(
                     onPressed: () {},
-                    minimumSize: Size(327, 56),
+                    minimumSize: Size(327.w, 56.h),
                     text: 'Get Started',
                     style: TextStyles.sora16W600White,
                   ),
